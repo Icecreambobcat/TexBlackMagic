@@ -27,36 +27,43 @@
 \newpage
 
 \section*{Soln. for problem 1}
-\large
+\normalsize
 
 Understand that $P(x)$ may be expanded as:
 \begin{align*}
 	\displaystyle\sum_{i=0}^{n}{\binom{n}{i} (4x)^{n-i} \times k^{-n}}
 \end{align*}
-And that $\binom{n}{i} = \binom{n}{n-i}$ by the symmetric distribution. \\
+And that $\binom{n}{i} = \binom{n}{n-i}$ by the symmetric distribution of Pascal's triangle. \\
 Thus taking the binomial coefficients of $x^4, x^3, x^2, x$ the following is obtained:
 \begin{itemize}
 	\item For $x^4$:
 	      \begin{align*}
-          C &= \binom{n}{4} \times 4^4 \times k^{4-n} \\
-            &= \frac{n!}{(4!)(n-4)!} \times 256 \times k^{4-n} \\
-            &= \frac{n(n-1)(n-2)(n-3)}{4!} \times 256 \times k^{4-n} \\
-            &= \frac{32(n)(n-1)(n-2)(n-3)}{3} \times k^{4-n} \\
+		      C & = \binom{n}{4} \times 4^4 \times k^{4-n}                \\
+		        & = \frac{n!}{(4!)(n-4)!} \times 256 \times k^{4-n}       \\
+		        & = \frac{n(n-1)(n-2)(n-3)}{4!} \times 256 \times k^{4-n} \\
+		        & = \frac{32(n)(n-1)(n-2)(n-3)}{3} \times k^{4-n}
 	      \end{align*}
 
 	\item For $x^3$:
-	      \[
-		      C = \binom{n}{3} \times 4^3 \times k^{3-n}
-	      \]
+	      \begin{align*}
+		      C & = \binom{n}{3} \times 4^3 \times k^{3-n}            \\
+		        & = \frac{n!}{(3!)(n-3)!} \times 64 \times k^{3-n}    \\
+		        & = \frac{(n)(n-1)(n-2)}{3!} \times 64 \times k^{3-n} \\
+		        & = \frac{32(n)(n-1)(n-2)}{3} \times k^{3-n}
+	      \end{align*}
 
 	\item For $x^2$:
-	      \[
-		      C = \binom{n}{2} \times 4^2 \times k^{2-n}
-	      \]
+	      \begin{align*}
+		      C & = \binom{n}{2} \times 4^2 \times k^{2-n}           \\
+		        & = \frac{n!}{(2!)(n-2)!} \times 16 \times k^{2-n} \\
+		        & = \frac{(n)(n-1)}{2!} \times 16 \times k^{2-n} \\
+            & = 8(n)(n-1) \times k^{2-n}
+	      \end{align*}
 	\item For $x$:
-	      \[
-		      C = \binom{n}{1} \times 4^1 \times k^{1-n}
-	      \]
+	      \begin{align*}
+		      C & = \binom{n}{1} \times 4^1 \times k^{1-n} \\
+            & =  4nk^{1-n}
+	      \end{align*}
 \end{itemize}
 
 \end{document}
