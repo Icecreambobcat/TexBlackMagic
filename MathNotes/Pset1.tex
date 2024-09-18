@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\author{\normalsize You know who}
+\title{\huge Problem set from Y11 3U finals}
+\date{\today}
+
+\usepackage{amsmath, amssymb, graphicx}
+\graphicspath{assets/}
+
+\usepackage[a4paper, margin=0.8in]{geometry}
+\usepackage[skip=0pt]{parskip}
+\usepackage{setspace}
+\setstretch{1.25}
+
+\begin{document}
+\maketitle
+\section*{List of problems}
+\large
+
+\begin{enumerate}
+	\item For $P(x) = (4x + \frac{1}{k})^n$, the following is true: \\
+	      The coefficient of $x^4$ is 8 times that of $x^3$ and the coefficient of $x^2$ is 24 times that of $x$. \\
+	      Find $n$ and $k$. \begin{flushright} (3) \end{flushright}
+
+	\item For $0\leq x<\pi$, evaluate $x$ so that $\sin{4x} = \sin{2x}$. \begin{flushright} (2) \end{flushright}
+\end{enumerate}
+
+\newpage
+
+\section*{Soln. for problem 1}
+\large
+
+Understand that $P(x)$ may be expanded as:
+\begin{align*}
+	\displaystyle\sum_{i=0}^{n}{\binom{n}{i} (4x)^{n-i} \times k^{-n}}
+\end{align*}
+And that $\binom{n}{i} = \binom{n}{n-i}$ by the symmetric distribution. \\
+Thus taking the binomial coefficients of $x^4, x^3, x^2, x$ the following is obtained:
+\begin{itemize}
+	\item For $x^4$:
+	      \begin{align*}
+          C &= \binom{n}{4} \times 4^4 \times k^{4-n} \\
+            &= \frac{n!}{(4!)(n-4)!} \times 256 \times k^{4-n} \\
+            &= \frac{n(n-1)(n-2)(n-3)}{4!} \times 256 \times k^{4-n} \\
+            &= \frac{32(n)(n-1)(n-2)(n-3)}{3} \times k^{4-n} \\
+	      \end{align*}
+
+	\item For $x^3$:
+	      \[
+		      C = \binom{n}{3} \times 4^3 \times k^{3-n}
+	      \]
+
+	\item For $x^2$:
+	      \[
+		      C = \binom{n}{2} \times 4^2 \times k^{2-n}
+	      \]
+	\item For $x$:
+	      \[
+		      C = \binom{n}{1} \times 4^1 \times k^{1-n}
+	      \]
+\end{itemize}
+
+\end{document}
