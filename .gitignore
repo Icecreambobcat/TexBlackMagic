@@ -2,3 +2,7 @@
 /amsfonts
 /amsmath
 *.gz
+*log
+*.fls
+*.fdb_latexmk
+*.aux
