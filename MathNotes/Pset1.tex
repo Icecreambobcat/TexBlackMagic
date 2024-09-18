@@ -25,7 +25,6 @@
 \end{enumerate}
 
 \newpage
-
 \section*{Soln. for problem 1}
 \normalsize
 
@@ -64,6 +63,47 @@ Thus taking the binomial coefficients of $x^4, x^3, x^2, x$ the following is obt
 		      C & = \binom{n}{1} \times 4^1 \times k^{1-n} \\
 		        & =  4nk^{1-n}
 	      \end{align*}
+\end{itemize}
+
+\newpage
+\section*{Soln. for problem 2}
+
+Considering the domain $0 \leq x<\pi$ as $0 \leq 2x<2\pi$, \\
+First rewrite $\sin{4x}$ as $2\sin{(2x)}\cos{(2x)}$, and thus:
+\begin{itemize}
+	\item First define LHS and RHS:
+	      \begin{align*}
+		      LHS & = \sin{4x}=2\sin{(2x)}\cos{(2x)} \\
+		      RHS & =\sin{2x}
+	      \end{align*}
+
+	\item Thus the following cases are trivially obtained:
+	      \begin{align*}
+		       & \sin{2x} = 0           \\
+		       & \cos{2x} = \frac{1}{2}
+	      \end{align*}
+
+	\item $\therefore$ For each of the following cases:
+	      \begin{enumerate}
+		      \item $\displaystyle\sin{2x} = 0$
+		            \begin{gather*}
+			            \sin^{-1}{0} = 2x \\ \\
+			            \therefore 2x = 0, \pi \\ \\
+			            x = 0, \frac{\pi}{2}
+		            \end{gather*}
+		      \item $\displaystyle\cos{2x} = \displaystyle\frac{1}{2}$
+		            \begin{gather*}
+			            \cos^{-1}{\frac{1}{2}} = 2x \\ \\
+			            \therefore 2x = \frac{\pi}{3}, \frac{5\pi}{3}, \\ \\
+			            x  = \frac{\pi}{6}, \frac{5\pi}{6}
+		            \end{gather*}
+	      \end{enumerate}
+
+	\item Thus:
+	      \begin{gather*}
+		      x = 0, \frac{\pi}{6}, \frac{\pi}{2}, \frac{5\pi}{6}
+	      \end{gather*}
+
 \end{itemize}
 
 \end{document}
