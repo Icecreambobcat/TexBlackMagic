@@ -1,6 +1,3 @@
+.tmp/
 *.gz
-*log
-*.fls
-*.fdb_latexmk
-*.aux
 .DS_Store
