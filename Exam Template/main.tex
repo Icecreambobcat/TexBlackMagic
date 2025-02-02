@@ -1,0 +1,159 @@
+\documentclass[12pt]{extarticle}    % change for bigger fonts
+\usepackage[utf8]{inputenc}         % must include
+\usepackage{exam}                   % the exam.sty styles
+
+\title{Exam Template}       % name of the exam
+\author{@draketeach}        % author(s)
+\date{September 2021}       % date last modified
+
+\begin{document}            % begin the document
+\input{coverpage.tex}       % the cover page is a separate file
+
+% section header
+\begin{sectionheader}{Trigonometry}
+    \textbf{5 marks\\
+    Attempt Questions 1--5\\
+    Allow about 10 minutes for this section}
+    
+    Use the multiple-choice answer sheet for Questions 1--5.
+\end{sectionheader}
+
+\begin{multiplechoice}              % multiple choice section
+
+    \item Which diagram best represents the solution set of $x^2-2x-3\ge 0$?                % mc question
+    \begin{enumerate}               % mc answers
+    \begin{multicols}{2}            % two columns
+        \item \mcpic{a.png}{5cm}    % mc answer picture
+        \item \mcpic{b.png}{5cm}
+        \item \mcpic{c.png}{5cm}
+        \item \mcpic{d.png}{5cm}
+    \end{multicols}
+    \end{enumerate}
+
+    \item Given $f(x)=1+\sqrt{x}$, what are the domain and range of $f^{-1}(x)$?    % mc question
+    \begin{enumerate}               % mc answers
+        \item $x\ge 0,\ y\ge 0$     % mc answer
+        \item $x\ge 0,\ y\ge 1$
+        \item $x\ge 1,\ y\ge 0$
+        \item $x\ge 1,\ y\ge 1$
+    \end{enumerate}    
+
+    \item Which of the following is an anti-derivative of $\displaystyle\frac{1}{4x^2+1}$?
+    \begin{enumerate}          
+        \item $\displaystyle2\tan^{-1}{\left(\frac{x}{2}\right)}+c$    
+        \item $\displaystyle\frac{1}{2}\tan^{-1}{\left(\frac{x}{2}\right)}+c$
+        \item $2\tan^{-1}{(2x)}+c$
+        \item $\displaystyle\frac{1}{2}\tan^{-1}{(2x)}+c$
+    \end{enumerate}    
+    
+    \pagebreak
+    
+    \item Maria starts at the origin and walks along all of the vector $2\utilde{i}+3\utilde{j}$ , then walks along all of the vector $3\utilde{i}-2\utilde{j}$ and finally along all of the vector $4\utilde{i}-3\utilde{j}$.
+
+    How far from the origin is she? % mc question
+    \begin{enumerate}               % mc answers
+        \item $\sqrt{77}$           % mc answer
+        \item $\sqrt{85}$
+        \item $2\sqrt{13}+\sqrt{5}$
+        \item $\sqrt{5}+\sqrt{7}+\sqrt{13}$
+    \end{enumerate}  
+    
+    \item The projection of the vector $\displaystyle\binom{6}{7}$ onto the line $y=2x$ is $\displaystyle\binom{4}{8}$.
+    
+    The point $(6,7)$ is reflected in the line $y=2x$ to a point $A$. 
+    
+    What is the position vector of the point $A$? 
+    \begin{enumerate}   
+        \item $\displaystyle\binom{6}{12}$ 
+        \item $\displaystyle\binom{2}{9}$
+        \item $\displaystyle\binom{-6}{7}$
+        \item $\displaystyle\binom{-2}{1}$
+    \end{enumerate}  
+    
+\end{multiplechoice}                % end of mc section
+
+\pagebreak
+
+% section header
+\begin{sectionheader}{Section II}
+    \textbf{20 marks\\
+    Attempt Questions 6--7\\
+    Allow about 30 minutes for this section}
+    
+    Answer each question in the appropriate writing booklet. Extra writing booklets are available.
+    
+    In Questions 6--7, your responses should include relevant mathematical reasoning and/or \\calculations.
+\end{sectionheader}
+
+\begin{shortanswer}         % short answer section
+
+\begin{bookletquestion}{16} % start booklet question
+
+\begin{enumerate}           % start question parts
+
+    \item Let $P(x)=x^3+3x^2-13x+6$.    % question part
+    \begin{enumerate}       % start question part parts
+        \item\mrks{1} Show that $P(2)=0$
+        \item\mrks{2} Hence, factor the polynomial $P(x)$ as $A(x)B(x)$, where $B(x)$ is a quadratic polynomial.
+    \end{enumerate}
+
+    \item\mrks{4} Use the principle of mathematical induction to show that for all integers $n\ge 1$,
+    $$1\times 2+2\times 5+3\times 8+...+n(3n-1)=n^2(n+1).$$
+    
+    \item\mrks{3} The diagram shows the graph of $y=f(x)$.
+
+    \begin{center}  % asymptote diagram
+    \begin{asy}
+        size(0,7cm);
+        draw((-5,0)--(5,0), arrow=Arrow);
+        label("$x$", (5,0), align=2S+W);
+        draw((0,-4)--(0,5), arrow=Arrow);
+        label("$y$", (0,5), align=S+2W);
+        label("$O$", (0,0), align=2S+2W);
+        draw((-2.5,4)..(-2,0)..(0,-2.5)..(2,0)..(2.5,4));
+        label("$-2$", (-2,0), align=SW);
+        label("$2$", (2,0), align=SE);
+        label("$-3$", (0,-2.5), align=SW);
+    \end{asy}
+    \end{center}
+
+    Sketch the graph of $\displaystyle y=\frac{1}{f(x)}$.
+    
+    \questionbreak
+    
+    \item\mrks{4} By expressing $\sqrt{3}\sin{x}+3\cos{x}$ in the form $A\sin{(x+\alpha)}$, solve\\ $\sqrt{3}\sin{x}+3\cos{x}=\sqrt{3}$, for $0\le x\le 2\pi$.
+
+    \item\mrks{2} Solve $\displaystyle\frac{dy}{dx}=e^{2y}$, finding $x$ as a function of $y$.
+
+    \questionend                % End of question...
+    \vspace{2cm}                % vertical space
+    \centerbold{Please turn over}   % centered bold text
+    
+\end{enumerate}                 % end question parts
+
+\end{bookletquestion}           % end booklet question
+
+\pagebreak 
+
+\begin{shortquestion}{4}        % start short question
+
+Consider the triangle shown.
+\pic{triangle.png}{7cm}         % insert picture
+\begin{enumerate}               % begin question parts
+    \item\mrks{2} Find the value of $\theta$, correct to the nearest degree.
+    \lines{4}                   % insert lines for writing
+    \item\mrks{2} Find the value of $x$, correct to one decimal place.
+    \lines{4}                   % insert lines for writing
+\end{enumerate}
+
+\end{shortquestion}             % end short question
+    
+\centerbold{End of paper}
+\end{shortanswer}               % end short answer section
+
+\pagebreak
+\blanklinedpage                 % blank page with lines
+\pagebreak
+\blankpage                      % blank page
+
+\end{document}                  % end the document
