@@ -1,3 +1,4 @@
 .tmp/
 *.gz
 .DS_Store
+*.log
