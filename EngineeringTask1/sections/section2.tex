@@ -1,0 +1,219 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../assets/}}}
+
+\begin{document}
+\subsection{Copper-based metals}
+\subsubsection{Elemental Copper} % 120
+Copper as an element is second only to silver in conductivity and exhibits excellent ductility and malleability, all properties highly desirable in electrical applications.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{copperwires.jpg}
+	\end{center}
+	\caption{Some copper wires \parencite{copper1}}
+\end{figure}
+
+Copper isn't just found in wires, however. It finds use in various components ranging from electrical terminals to motors, but all of these take advantage of a few major properties of copper:
+\begin{itemize}
+	\item Electrical \& thermal conductivity
+	\item Ductility \& malleability
+	\item Chemical resistance
+	\item Infinite recyclability
+\end{itemize}
+\parencite{copper2}
+
+While conductivity is naturally the paramount property to consider for electrical applications, the other properties elevate copper to an invaluable engineering material.
+Not only does its high ductility and recyclability lend itself to easy manufacturing and use, but its chemical resistance ensures longevity once installed, withstanding even extreme industrial loads.
+\newpage
+
+\subsubsection{Brass} % 110
+While brass measures objectively lower in thermal and electrical conductivity when compared to its parent metal, copper, it makes up this deficit through its higher strength.
+Similar to copper, brass is also utilised for wires and endpoint terminals, as well as switch connectors.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{brasswire.png}
+	\end{center}
+	\caption{Bundled brass wire \parencite{brass2npic}}
+\end{figure}
+
+A standard nominal composition for brass is as follows:
+\begin{itemize}
+	\item $\sim70\%\mathrm{Cu}$
+	\item $\sim30\%\mathrm{Zn}$
+\end{itemize}
+\parencite{brassapps}
+
+While other alloying additions may be varied to adjust the final properties, this proves a baseline of expectation; brass is also more inexpensive compared to pure copper, proving to be an important trait in today's economy.
+The extra hardness of the 70-30 alloy also enables easy machining of components, allowing for intricate geometries without structurally unsound parts \textit{e.g.} CPU pins.
+An image is included below for clarity.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{cpupins.jpg}
+	\end{center}
+	\caption{Brass CPU pins \parencite{cpupins}}
+\end{figure}
+
+\newpage
+
+\subsubsection{Chromium, Beryllium, and Zirconium Copper} % 160
+While all 3 of these metals may be alloyed with copper with varied resulting properties, this report will only discuss beryllium copper for the sake of brevity, noting its comparatively excellent strength.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{becu.jpg}
+	\end{center}
+	\caption{Beryllium copper (BeCu) pieces \parencite{becu1}}
+\end{figure}
+
+A typical nominal composition for beryllium copper (C17200) is as follows:
+\begin{itemize}
+	\item $\sim98\%\mathrm{Cu}$
+	\item $\sim2\%\mathrm{Be}$
+\end{itemize}
+\parencite{becu1}
+
+Boasting strength comparable to alloy steels, beryllium copper is ideal for use in contact components such as switches and relays.
+In particular, while it's not utilised for wiring due to its high strength, it still finds use in connectors between components.
+Some specific properties and their impacts are as follows:
+\begin{itemize}
+	\item Comparable strength to steels allows for use in conductive yet load bearing parts
+	\item Moderate conductivity reduces, but doesn't eliminate use in electrical parts
+\end{itemize}
+\parencite{becu2}
+
+While the conductivity of beryllium copper is roughly one-fifth that of pure copper, it retains enough conductivity to justify use.
+Contact components specifically require materials capable of withstanding repeated mechanical load, making beryllium copper an ideal compromise between durability and conductivity (efficiency).
+\newpage
+
+\subsection{Forming Copper for Electrical Applications}
+\subsubsection{Cold Working (drawing, extrusion, \textit{etc.})}
+\paragraph{Die Drawing} % 130
+The ductile nature of copper and most cuprous alloys lends itself to cold working with relative ease, with drawing and extrusion being prime examples.
+Illustrated below is a die for drawing wires.
+
+\begin{figure}[h!]
+	\begin{center}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\begin{center}
+				\includegraphics[width=\textwidth]{drawdie.png}
+			\end{center}
+			\caption{Technical specifications for a wire die \parencite{wiredraw}}
+		\end{subfigure}%
+		~~
+		\begin{subfigure}[t]{0.45\textwidth}
+			\begin{center}
+				\includegraphics[width=\textwidth]{wiredrawing.png}
+			\end{center}
+			\caption{Stress diagrams of various drawn wires \parencite{wiredraw}}
+		\end{subfigure}
+	\end{center}
+	\caption{Various wire drawing diagrams}
+\end{figure}
+
+The process of die drawing can be summarised as follows:
+\begin{enumerate}
+	\item The material pre-shaped into a suitable diameter from which to reduce
+	\item The wire is sequentially passed through a series of dies with decreasing diameter
+	\item As the wire lengthens, the diameter decreases
+\end{enumerate}
+
+Notice that the wire is \textit{drawn} through the dies as compared to extrusion, where the material is \textit{pushed} through the dies.
+Wires and cables are formed via die drawing for its economic efficiency, while more complex geometries must be formed through machining or extrusion.
+However, most, if not all wires used in electrical applications are drawn.
+\newpage
+
+\paragraph{Extrusion} % 180
+The process of extrusion is both similar and vastly different from die drawing.
+While the material is passed through a narrow opening (the extrusion die), it's instead pushed through with hydraulic pressure (typically) while heated above the recrystallisation temperature.
+
+\begin{figure}[h!]
+	\begin{subfigure}[t]{0.35\textwidth}
+		\includegraphics[width=\textwidth]{extrusionpic.jpg}
+		\caption{A diagram of the extrusion process \parencite{extrusion}}
+	\end{subfigure}%
+  ~~
+	\begin{subfigure}[t]{0.6\textwidth}
+		\includegraphics[width=\textwidth]{extrusionexamples.png}
+		\caption{Examples of extruded parts \parencite{extrusion2}}
+	\end{subfigure}
+  \caption{Diagram and example of extruded parts}
+\end{figure}
+
+While the specific part illustrated in the above figure may not match any specific electrical components, parts like busbars, connectors, and terminals are common candidates for extrusion manufacturing.
+Some specific benefits of extrusion include:
+\begin{itemize}
+	\item Complex, continuous geometry capabilities
+	\item Economically efficient
+	\item Effective surface finishing
+\end{itemize}
+If the specification of \textit{electrical applications} is to be taken quite literally, then the aforementioned components highlight the benefits of extrusion, allowing for more complex geometries than die drawing while maintaining part continuity.
+However, if this specification is taken more loosely, then examples may also include heat sinks and other components used in electrical applications, albeit not as an electrical conductor.
+An image is included below.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.75\textwidth]{heatsink.jpg}
+  \end{center}
+  \caption{(Extruded) copper heat sink \parencite{heatsink}}
+\end{figure}
+\newpage
+
+\subsubsection{Casting} % 240
+Copper may also be cast for electrical applications, allowing for the production of complex geometries that may be unrealistic to form by other means.
+Specifically, casting allows for the production of substantially larger parts compared to other methods without sacrificing desirable mechanical properties utilising varying casting techniques.
+For the sake of example, some casting techniques include:
+\begin{itemize}
+  \item Sand casting 
+  \item Continuous casting 
+  \item Centrifugal casting 
+  \item Various other mould-based methods \textit{e.g.}
+    \begin{itemize}
+      \item Shell moulding 
+      \item Gravity die 
+      \item Chill casting
+    \end{itemize}
+\end{itemize}
+
+This report will discuss continuous and sand casting, specifically.
+
+\paragraph{Continuous casting}
+While less common in electrical applications directly, continuous casting is still an essential method in producing material "blanks" for extrusion and die drawing.
+The process is rather simple: molten metal is constantly passed through a thermally conductive mould that is continuously cooled to form an uninterrupted part that can then be cut to size or further refined. \parencite{casting1}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.75\textwidth]{contcast.jpg}
+  \end{center}
+  \caption{Continuous cast copper \parencite{castingpic2}}
+\end{figure}
+\newpage
+
+\paragraph{Sand casting}
+One of the age-old methods of forming, sand casting is characterised by its well-known procedure and developed toolkit for complex volumes.
+These parts are common in high-volume high-intensity applications such as motors and generators, as well as relay connectors where function supersedes form.
+Indeed, the issues of poor surface finishing or uneven cooling may be unavoidable, but the flexibility of sand casting is a justifiable compromise. \parencite{casting1}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.75\textwidth]{castcopper.jpg}
+  \end{center}
+  \caption{Sand cast bushings \parencite{castingpic}}
+\end{figure}
+
+A reference procedure is as follows:
+\begin{enumerate}
+  \item Reference creation 
+  \item Mould fitting \& packing 
+  \item Inner void fills 
+  \item Add risers and vents 
+  \item Melt metal \& pour 
+  \item Once cooled: remove from mould and process as necessary
+\end{enumerate}
+\newpage
+
+\sloppy
+\printbibliography[heading=subbibnumbered,keyword={sect2},title={References}]
+\fussy
+\end{document}

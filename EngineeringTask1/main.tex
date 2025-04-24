@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{preamble}
+
+% start
+\begin{document}
+\clearpage
+\begin{titlepage}
+
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	\center
+
+	\Huge \textbf{School name}\\[1.25cm]
+	\large Engineering Studies - Preliminary Course\\[0.75cm]
+
+	\HRule \\[0.8cm]
+	{ \LARGE \textbf{Engineering Studies Task 1}}\\[0.4cm]
+	\HRule \\[2cm]
+
+	\includegraphics[scale=1]{logo.jpg}\\[2cm]
+
+	\vfill
+
+	\begin{center}
+		\begin{tabular}{ c   |   c }
+			Generic name & 12345
+			% Change out names for gh commit
+		\end{tabular}
+	\end{center}
+
+	\vskip 0.85cm
+		{\large March 21, 2025}\\[1cm]
+	\vfill
+
+\end{titlepage}
+\newpage
+\justifying
+\setcounter{page}{1}
+\subfile{sections/abstract.tex}
+\newpage
+\section{Ferrous Metals}
+\subfile{sections/section1.tex}
+\newpage
+\section{Non-ferrous Metals}
+\subfile{sections/section2.tex}
+\newpage
+\section{Ceramics}
+\subfile{sections/section3.tex}
+\newpage
+\section{Conclusion}
+\subfile{sections/conclusion.tex}
+\end{document}

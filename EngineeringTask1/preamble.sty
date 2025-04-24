@@ -1,0 +1,34 @@
+\ProvidesPackage{preamble}
+
+% Formatting declaration
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx, parskip, setspace, fontspec, ragged2e, fancyhdr, csquotes, enumitem, array, tabularx, subcaption}
+\usepackage{amsmath, amssymb, tikz, chemfig}
+\usepackage[english]{babel}
+\usepackage[
+	sorting=nty,
+	% style=authoryear-icomp,
+	style=apa,
+]{biblatex}
+\setstretch{1}
+\usepackage{subfiles}
+
+% Self defined
+\graphicspath{ {assets/} }
+\setmainfont{Arial}
+\addbibresource{references/misc.bib}
+\addbibresource{references/sect1_1.bib}
+\addbibresource{references/sect1_2.bib}
+\addbibresource{references/sect2_1.bib}
+\addbibresource{references/sect2_2.bib}
+\addbibresource{references/sect3_1.bib}
+\addbibresource{references/sect3_2.bib}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.5}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{Required footer format}
