@@ -1,0 +1,93 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../assets/}}}
+
+\begin{document}
+\section{Vehicle Foot Brake System}
+\subsection{Vehicle characteristics}
+Define the following from the given table:
+\[\text{Constants} \coloneq \begin{cases}
+		g & = 5  \\
+		h & = 10 \\
+		i & = 22 \\
+		j & = 6
+	\end{cases}\]
+Hence, we have the following:
+\begin{table}[h!]
+	\begin{tabularx}{0.5\textwidth} {
+			| >{\centering\arraybackslash}X
+			| >{\centering\arraybackslash}X |
+		}
+		\hline
+		\textbf{Characteristic}       & \textbf{Value}    \\
+		\hline\hline
+		Mass                          & $2053\mathrm{kg}$ \\
+		\hline
+		Wheelbase                     & $2.55\mathrm{m}$  \\
+		\hline
+		Height of CM                  & $0.553\mathrm{m}$ \\
+		\hline
+		Dia. of wheel (incl. tyre)    & $625\mathrm{mm}$  \\
+		\hline
+		Dia. of front calliper piston & $50\mathrm{mm}$   \\
+		\hline
+		Dia. of master piston         & $37\mathrm{mm}$   \\
+		\hline
+		Dia. of booster diaphragm     & $166\mathrm{mm}$  \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\subsection{Stopping Distance and Braking Force}
+\subsubsection{Speed}
+It is given that $s=0.1\mathrm{SP}+0.006\mathrm{SP}^2$, where $\mathrm{SP}$ is the speed.
+Hence, $s \approx58 \mathrm{m}$ for $\mathrm{SP} = 91 \mathrm{km/h}$.
+\subsubsection{Kinetic Energy}
+It is well known that $\mathrm{KE} = \frac{1}{2}mv^2$.
+Hence, take $v = \frac{455}{18} \mathrm{m/s}$ and we have $\mathrm{KE} \approx 656 \mathrm{kJ}$.
+\subsubsection{Braking Force}
+Consider $\mathrm{W} = \mathrm{F} \times \mathrm{d}$.
+A simple rearrangement yields $F_s \approx 11.2 \mathrm{kN}$ by substituting values previously found.
+
+\subsection{Normal Reaction and Force on Tyres}
+\subsubsection{Normal Reaction}
+Consider $N = \dfrac{m}{4g}$ for the normal force on each tyre (given there are 4).
+Hence, $N = 5132.5 \mathrm{N}$ per tyre.
+No moments need to be considered; none are induced.
+\subsubsection{Required and maximum friction force}
+Consider $F_F = \frac{F_s}{4} \approx 2710 \mathrm{N}$ for the required braking force on each tyre to stop within the required distance.
+The maximum friction force is trivially $5132.5\times0.9 \approx 4620 \mathrm{N}$.
+\subsubsection{Moment of the frictional force}
+It is known that the radius of the tyre and wheel combined are $r = 0.3125 \mathrm{m}$.
+Hence, the two moments are given as follows:
+\begin{align*}
+	M_\text{max} & = r\times F_\text{max} \approx 1443. \\
+	M_\text{req} & = r\times F_\text{F} \approx 872.
+\end{align*}
+
+\subsection{Friction Forces and Piston Forces -- Disk brakes}
+\subsubsection{Required friction}
+Take the required moment from above and the distance of the point of application from the center to be $r_\mu$.
+Hence, the frictional force is given by
+\[F_\text{disk} = \dfrac{M_\text{req}}{r_\mu} \approx 5950 \mathrm{N}\]
+for the force at each set of brakes (front and rear, left and right).
+\subsubsection{Necessary normal}
+Let us assume the previous force to find the necessary normal (equivalent to braking force) on each brake disk.
+We have already shown $\mu=\tan\theta$, and hence, $F = \frac{F_\text{disk}}{\mu} \approx 11.3 \mathrm{kN}$ for each brake disk.
+
+\subsection{Piston Forces and Hydraulic System}
+\subsubsection{Front and rear cylinder}
+Assume a single cylinder applies the force.
+It is well known that $P = \frac{F}{A}$.
+Substitution evaluates to $P = \frac{F}{\pi\times25^2\times10^{-6}} \approx 5.76 \mathrm{MPa}$ for the piston force.
+The rear piston must be of equal size to the front piston if the assumption that the frictional force necessary is equal.
+\subsubsection{Master cylinder}
+Using a the same expression, we have $F \approx 6200 \mathrm{N}$ by rearranging with diameter $37 \mathrm{mm}$.
+
+\subsection{Vacuum Booster System}
+Consider $\Delta F=\Delta P \times A$.
+Hence, $F = 50000\times \frac{166}{2}^2\times\pi\times 10^{-6} \approx 1080 \mathrm{N}$.
+
+\subsection{Pedal Lever System}
+Consider the necessary force as $F-\Delta F \approx 5110 \mathrm{N}$.
+Hence, as the ratio is given, we have a mechanical advantage of $3.5:1$ such that the necessary force is $F\approx1460 \mathrm{N}$.
+\end{document}

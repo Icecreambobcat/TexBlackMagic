@@ -1,0 +1,31 @@
+\ProvidesPackage{preamble}
+
+
+% Formatting declaration
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx, parskip, setspace, fontspec, ragged2e, fancyhdr, csquotes, enumitem, array, tabularx, subcaption, longtable}
+\usepackage{amsmath, amssymb, amsthm, physics, tikz, chemfig, cancel, overarrows}
+\usepackage[fixamsmath]{mathtools}
+\usepackage[english]{babel}
+\usepackage[
+	sorting=nty,
+	% style=authoryear-icomp,
+	style=apa,
+]{biblatex}
+\setstretch{1}
+\usepackage{subfiles}
+
+% Self defined
+\graphicspath{ {assets/} }
+% \setmainfont{Arial}
+% \addbibresource{references/main.bib}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.5}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{Engineering Studies AT2; Due 27/06/2025}

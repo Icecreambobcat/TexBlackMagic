@@ -1,0 +1,73 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../assets/}}}
+
+\begin{document}
+\section{Brake Pad Coefficient of Friction}
+\subsection{Calculating the coefficient}
+Consider the definition for the coefficient of friction:
+\[\mu \coloneq \dfrac{F_\text{max}}{N}\]
+where $F_\text{max}$ is the maximum frictional force, and $N$ the normal force.
+Hence, consider the following diagram.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.55\textwidth]{incline.png}
+	\end{center}
+	\caption{Aiden's diagram of an incline plane}
+\end{figure}
+Hence, consider that as the system is static, $f = mg\sin\theta$, and that $\exists\theta:mg\sin\theta=F_\text{max}$.
+Hence, the coefficient of friction is simply
+\[\mu = \dfrac{\cancel{mg}\sin\theta}{\cancel{mg}\cos\theta} = \tan\theta \]
+where $\theta$ is the angle of repose such that the object will tend to move. \\
+Hence, we record the angle of repose across a number of trials:
+\begin{table}[h!]
+	\begin{tabularx}{0.5\textwidth} {
+			| >{\centering\arraybackslash}X
+			| >{\centering\arraybackslash}X |
+		}
+		\hline
+		\textbf{Trial number} & \textbf{Measured $\theta$} \\
+		\hline
+		$1$                   & $28^\circ$                 \\
+		\hline
+		$2$                   & $31^\circ$                 \\
+		\hline
+		$3$                   & $26^\circ$                 \\
+		\hline
+		$4$                   & $28.5^\circ$               \\
+		\hline
+		$5$                   & $28^\circ$                 \\
+		\hline
+		$6$                   & $25^\circ$                 \\
+		\hline\hline
+		\textbf{Mean}         & $27.75^\circ$              \\
+		\hline
+	\end{tabularx}
+\end{table} \\
+And the result is a trivial calculation:
+\[\mu = \tan(27.75^\circ) \approx 0.58. \tag{2DP}\]
+
+\subsection{Determining a radius for the brake pad}
+Consider that we want the average radius for the brake pad.
+As it is nontrivial to directly take radius from the arc, consider the following diagram:
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.85\textwidth]{radiusdiagram.png}
+	\end{center}
+	\caption{Rex's geogebra diagram for calculating the radius}
+\end{figure} \\
+As we are given the arc centred at $A$ from $B$ to $C$, draw the line $BC$ and take $D$ as its midpoint. Draw the line $DE \perp BC$.
+Consider, the radius is simply $AE$.
+Define the following:
+\begin{align*}
+	r & \coloneq AE \\
+	h & \coloneq DE \\
+	c & \coloneq BC.
+\end{align*}
+Hence, by the Pythagorean theorem, we have:
+\begin{align*}
+	r^2          & = (r-h)^2 + \dfrac{c}{2}^2                  \\
+	\cancel{r^2} & = \cancel{r^2} - 2rh + h^2 + \dfrac{c^2}{4} \\
+	r            & = \dfrac{h}{2} + \dfrac{c^2}{8h}.
+\end{align*}
+And by a substitution of values, we have $r_\text{in}= 123$, $r_\text{out} \approx 170.8409$, and $r_\mu \approx 146.9205$, where $r_\mu$ denotes the arithmetic mean of the inner and outer radii.
+\end{document}

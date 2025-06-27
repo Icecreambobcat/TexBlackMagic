@@ -1,0 +1,30 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../assets/}}}
+
+\begin{document}
+\section{Vehicle Park Brake System}
+\subsection{Brake Torque}
+By trigonometry we have the necessary torque as:
+\[T=mg\sin20^\circ\times\dfrac{0.17}{2}\times4^{-1}\approx 37.3 \mathrm{Nm}\]
+for each wheel.
+Friction force on each drum is also a trivial calculation:
+\[F_F=\dfrac{mg\sin20^\circ}{4}\approx1760 \mathrm{N}\]
+
+\subsection{Drum Brake System}
+Take $\mu$ to 2 decimal points. Trivially, $F = \frac{F_F}{\mu} \approx 3030 \mathrm{N}$ for each drum.
+Halve this to $1515 \mathrm{N}$ for each shoe.
+It is known that $F = 7.6\times T$ such that $T=199\mathrm{N}$.
+\subsection{Cable System}
+Consider:
+\[T_\text{handle}=\dfrac{8T}{0.95}\approx 1682 \mathrm{N}\]
+as the tension must be applied twice due to the dual shoes on 4 drums.
+Then:
+\[ L\varepsilon = \dfrac{T\times L^2}{A\times E} \approx0.005 \mathrm{mm}\]
+returns the expected elongation by multiplying strain with total length, where $T$ denotes handle tension, $L$ denotes total length, $A$ denotes cross sectional area, and $E$ denotes youngs' modulus.
+\subsection{Hand Brake Lever System}
+Define the following: $l_a\coloneq226$, $l_b\coloneq57$.
+From this, take the tension of the total cable as $T=1682$.
+Hence:
+\[F_\text{hb} \times l_a = F_\text{b} \times l_b \implies F_\text{hb} \approx 424.4 \mathrm{N}\]
+and we have the required handbrake force.
+\end{document}
