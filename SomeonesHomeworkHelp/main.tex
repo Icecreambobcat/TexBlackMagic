@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx, parskip, setspace, ragged2e, enumitem}
+\usepackage{amsmath, amssymb, amsthm, tikz, tikz-3dplot, chemfig, physics, cancel, overarrows}
+\usepackage[english]{babel}
+\setstretch{1.5}
+
+\usepackage{accents}
+
+\newcommand{\ut}[1]{\underaccent{\tilde}{#1}}
+\renewcommand{\vec}[1]{\ut{#1}}
+
+\begin{document}
+We are given that for a real quadratic $f: \mathbb{R} \to \mathbb{R}$ and $a$, $b$, $c \in \mathbb{R}$ the following:
+\[\begin{cases} f(a) = bc \\ f(b) = ac \\ f(c) = ab \end{cases}\]
+\textit{ Sol. }
+Let $f: x \mapsto kx^2 + qx + p$, for $k$, $q$, $p \in \mathbb{R}$.
+Hence, we have the following:
+\begin{align*}
+	f(a) & = ka^2 + qa + p = bc \\
+	f(b) & = kb^2 + qb + p = ac \\
+	f(c) & = kc^2 + qc + p = ab
+\end{align*}
+Consider $f(a) - f(b) = k(a^2 - b^2) + q(a - b)$.
+Hence:
+\begin{align*}
+  f(a) - f(b) &= (a-b)[k(a+b) + q]\\
+  f(c) - f(a) &= (c-a)[k(a+c) + q]\\
+  f(b) - f(c) &= (b-c)[k(b+c) + q]
+\end{align*}
+Hence:
+\end{document}

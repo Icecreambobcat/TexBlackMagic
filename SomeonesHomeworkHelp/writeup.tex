@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx, parskip, setspace, ragged2e, enumitem}
+\usepackage{amsmath, amssymb, amsthm, tikz, tikz-3dplot, chemfig, physics, cancel, overarrows}
+\usepackage[english]{babel}
+\setstretch{1.5}
+
+\usepackage{accents}
+
+\renewcommand{\vec}[1]{\undertilde{#1}}
+
+\begin{document}
+Suppose a sphere $\mathcal{S}$ of radius $1$ centred at point $P$ with position vector \[\vec{p}=\begin{bmatrix}
+		10 \\
+		0  \\
+		2
+	\end{bmatrix},\]
+and define the line
+\[\ell=\begin{bmatrix}
+		0 \\
+		0 \\
+		2
+	\end{bmatrix} + k\begin{bmatrix}
+		1 \\
+		Y \\
+		Z
+	\end{bmatrix},\]
+  where $k\in \mathbb{R}$ and $Y, Z \sim \mathcal{U}[-1,1]$.
+\vskip 8pt
+\hrule
+\begin{enumerate}
+	\item[(i)] By considering an appropriate perpendicular-distance expression, deduce that for $\ell$ to intersect $\mathcal{S}$,
+	      \[\dfrac{10\sqrt{Y^2+Z^2}}{\sqrt{1+Y^2+Z^2}} \leq 1,\]
+	      and further show that
+	      \[Y^2 + Z^2 \leq \dfrac{1}{99}.\]
+	\item[(ii)] Explain why this result is meaningful.
+	      \textbf{You may assume the fact that for $X, Y \sim \mathcal{U}[-n,n], n \in \mathbb{R}^+$, the point $P(X, Y)$ is uniformly distributed in the resulting square without proof.}
+	\item[(iii)] Hence, by considering the ratio of favourable outcomes to total outcomes, deduce the probability that the line $\ell$ intersects $\mathcal{S}$.
+\end{enumerate}
+\end{document}
