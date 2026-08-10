@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{ragged2e}
+\justifying
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt}
+\usepackage[a4paper, margin=2cm]{geometry}
+
+\pagestyle{empty}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\begin{document}
+\begin{center}
+	{\Large \textbf{CSSA HELL}} \\
+	Why would you do this
+	\rule{\textwidth}{1pt}
+\end{center}
+
+We have the following:
+\begin{align*}
+	a_A & = -(g+kv) \\
+	a_B & = -(g+kv).
+\end{align*}
+Put $a = \dv{v}{t}$ and integrate.
+\begin{align*}
+	\ln\abs{g+kv_A} & = -kt + C_1  \\
+	\ln\abs{g+kv_B} & = -kt + C_2.
+\end{align*}
+Set $t=0$ for both, with initial unsigned velocities $u_1$, $u_2$, and take upwards as positive to yield:
+\begin{align*}
+  C_1 & = \ln\abs{g+ku_1} \\
+  C_2 & = \ln\abs{g-ku_2}.
+\end{align*}
+Considering initial signs, we have:
+\begin{align*}
+	v_A & = \qty(\dfrac{g+ku_1}{k})e^{-kt} - \dfrac{g}{k}   \\
+	v_B & = -\qty(\dfrac{ku_2-g}{k})e^{-kt} - \dfrac{g}{k}.
+\end{align*}
+Now, integrate for $x_A$, $x_B$:
+\begin{align*}
+	x_A & = \int v_A \dd{t}                                         \\
+	    & = C_3 - \qty(\dfrac{g+ku_1}{k^2})e^{-kt} - \dfrac{gt}{k}  \\
+	x_B & = \int v_B \dd{t}                                         \\
+	    & = C_4 + \qty(\dfrac{ku_2-g}{k^2})e^{-kt} - \dfrac{gt}{k}.
+\end{align*}
+Taking initial conditions again, we have:
+\begin{align*}
+	C_3 & = \dfrac{g+ku_1}{k^2}    \\
+	C_4 & = H-\dfrac{ku_2-g}{k^2},
+\end{align*}
+which gives
+\begin{align*}
+	x_A & = \qty(1-e^{-kt})\qty(\dfrac{g+ku_1}{k^2}) - \dfrac{gt}{k}      \\
+	x_B & = H - \qty(1-e^{-kt})\qty(\dfrac{ku_2-g}{k^2}) - \dfrac{gt}{k}.
+\end{align*}
+\newpage
+Suppose $x_A(T)$ is maximised. Then, $x_B(T) - x_A(T) > 0$.
+Also,
+\[T = \dfrac{1}{k}\ln\qty(\dfrac{g+ku_1}{g}),\]
+so
+\[  H - \qty(\dfrac{ku_1}{g+ku_1})\qty(\dfrac{ku_2-g}{k^2}) - \qty(\dfrac{ku_1}{g+ku_1})\qty(\dfrac{g+ku_1}{k^2}) > 0.\]
+Hence,
+\begin{align*}
+	H & > \dfrac{u_1}{g+ku_1}\qty(\dfrac{ku_2-g}{k}) + \dfrac{u_1}{k} \\
+	  & = \dfrac{ku_1u_2 +ku_1^2}{k(g+ku_1)}                          \\
+	  & = \dfrac{ku_1(u_1+u_2)}{k(g+ku_1)}                            \\
+	  & = \dfrac{u_1+u_2}{k}\qty(1 - \dfrac{g}{g+ku_1}).
+\end{align*}
+However, for $t \neq 0$ and $x_A = 0$, we must have $x_B < 0$.
+Denote $t_0 \neq 0$ as the time when $x_A = 0$, so
+\begin{align*}
+	\dfrac{gt_0}{k} & = \qty(1-e^{-kt_0})\qty(\dfrac{g+ku_1}{k^2}) \\
+	t_0             & = \qty(1-e^{-kt_0})\qty(\dfrac{g+ku_1}{gk})  \\
+	1 - e^{-kt_0}   & = \dfrac{g+ku_1}{gkt_0}.
+\end{align*}
+Substituting this into $x_B$, we get:
+\begin{align*}
+	H & < \qty(1-e^{-kt_0})\qty(\dfrac{ku_2-g}{k^2}) + \qty(1-e^{-kt_0})\qty(\dfrac{g+ku_1}{k^2}) \\
+	  & < \qty(\dfrac{ku_2-g}{k^2}) + \qty(\dfrac{g+ku_1}{k^2})                                   \\
+	  & = \dfrac{u_1 +u_2}{k}.
+\end{align*}
+Combining these, we get
+\[\boxed{
+	  \dfrac{u_1+u_2}{k}\qty(1 - \dfrac{g}{g+ku_1}) < H < \dfrac{u_1+u_2}{k},
+}\]
+and we are done.
+\end{document}

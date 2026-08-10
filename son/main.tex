@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{ragged2e}
+\justifying
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt}
+\usepackage[a4paper, margin=2cm]{geometry}
+
+\pagestyle{empty}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\begin{document}
+\begin{center}
+	{\Large \textbf{COTW \#51 Problem 2}} \\
+	Solutions by \texttt{@Frosty}, \texttt{@Theo} and \texttt{@BigTanuki}
+	\rule{\textwidth}{1pt}
+\end{center}
+
+\begin{theorem}
+	For all positive integers $n$,
+	\begin{equation*}
+		\boxed{\sum^{n}_{k=0}\binom{n}{k}\binom{n+k}{k}= \sum^{n}_{k=0}\binom{n}{k}^2 2^k.}
+	\end{equation*}
+\end{theorem}
+
+\begin{proof}[Proof (Algebraic)]
+	Recall that $\binom{n+k}{k}=\binom{n+k}{n}$, and recall that this is the coefficient of $x^n$ in the expansion of $(x+1)^{n+k}$, for nonnegative integers $n, k$.
+
+	Define the magical function $\mathcal{C}: \mathbb{Z}[x]\times\mathbb{Z} \to \mathbb{Z}$, where $\mathcal{C}(f, n)$ is the coefficient of $x^n$ in $f$, a polynomial of integer coefficients.
+
+	Write
+	\begin{align*}
+		\sum^{n}_{k=0}\binom{n}{k}\binom{n+k}{k} & = \sum^{n}_{k=0}\binom{n}{k}\binom{n+k}{n}                                                                   \\
+		                                         & = \sum^{n}_{k=0}\binom{n}{k}\mathcal{C}\qty((x+1)^{n+k}, n)                                                  \\
+		                                         & = \mathcal{C}\qty((1+x)^n\sum^{n}_{k=0}\binom{n}{k}(1+x)^{k}, n) \tag{$\mathcal{C}(af,n)=a\mathcal{C}(f,n)$} \\
+		                                         & = \mathcal{C}\qty((1+x)^n(2+x)^n, n).
+	\end{align*}
+	Expanding this, we get
+	\begin{align*}
+		\mathcal{C}\qty((1+x)^n(2+x)^n, n) & = \mathcal{C}\qty(\sum^{n}_{k=0}\binom{n}{k}x^{k}\sum^{n}_{j=0}\binom{n}{j}2^{n-j}x^j, n) \\
+		                                   & = \sum^{n}_{k=0}\binom{n}{k}\binom{n}{n-k}2^k \tag{Set $j=n-k$}                           \\
+		                                   & = \sum^{n}_{k=0}\binom{n}{k}^2 2^k,
+	\end{align*}
+	and we are done.
+\end{proof}
+\textbf{Remark.} With help from \texttt{@BigTanuki}.
+
+\newpage
+We now prove this result combinatorially.
+\begin{proof}[Proof (Combinatorial)]
+	Suppose Theo has $n$ K-pop songs and $n$ J-pop songs saved.
+	From these songs, suppose he first picks $k$ K-pop songs and pools them together with all $n$ J-pop songs.
+  As there are $\binom{n}{k}$ ways to choose $k$ K-pop songs and $\binom{n+k}{n}$ ways to form a playlist from this pool, there are $\binom{n}{k}\binom{n+k}{n}$ ways to form a playlist of length $n$.
+	Hence, adding together the ways to pick such a playlist across all values of $k$, we get
+	\[\sum^{n}_{k=0}\binom{n}{k}\binom{n+k}{n} = \sum^{n}_{k=0}\binom{n}{k}\binom{n+k}{k}.\]
+	We now count this a different way.
+	Suppose that Theo has $k$ K-pop songs in his playlist of length $n$, and thus $n-k$ J-pop songs in his playlist.
+	Immediately, there are $\binom{n}{k}\binom{n}{n-k}=\binom{n}{k}^2$ ways to choose $k$ K-pop songs and $n-k$ J-pop songs.
+	However, because all $k$ K-pop songs in his playlist must come from a pool of $k$ or more K-pop songs that he initially chooses, there are potentially up to $n-k$ more K-pop songs in the pool that remain unchosen.
+	Hence, each way of forming a playlist has an additional factor of $2^{n-k}$ by counting the potential K-pop songs left in the pool.
+	Summing over all $k$, we get
+	\[\sum^{n}_{k=0}\binom{n}{k}^2 2^{n-k} = \sum^{n}_{k=0}\binom{n}{k}^2 2^{k},\]
+	and we are done.
+\end{proof}
+\textbf{Remark.} With help from \texttt{@Theo}.
+
+We provide another algebraic proof.
+Firstly, we prove a useful property of finite sums.
+\begin{lemma}
+	For all positive integers $n$, and $f: \mathbb{Z}^2 \to \mathbb{R}$,
+	\begin{equation*}
+		\boxed{\sum^{n}_{k=0}\sum^{k}_{j=0}f(k, j) = \sum^{n}_{j=0}\sum^{n}_{k=j}f(k, j).} \tag{$\phi$}
+	\end{equation*}
+\end{lemma}
+\begin{proof}
+	Consider the following table of sum values for varying $k$ and $j$.
+
+	\begin{tabular}{c | c c c c c c}
+		$k/j$  & $0$        & $1$        & $2$        & $\cdots$ & $n-1$         & $n$       \\
+		\hline
+		$0$    & $f(0, 0)$                                                                   \\
+		$1$    & $f(1,0)$   & $f(1,1)$                                                       \\
+		$2$    & $f(2,0)$   & $f(2,1)$   & $f(2,2)$                                          \\
+		\vdots & $\vdots$   & $\vdots$   & $\vdots$   & $\ddots$                             \\
+		$n-1$  & $f(n-1,0)$ & $f(n-1,1)$ & $f(n-1,2)$ & $\cdots$ & $f(n-1, n-1)$             \\
+		$n$    & $f(n,0)$   & $f(n,1)$   & $f(n,2)$   & $\cdots$ & $f(n, n-1)$   & $f(n, n)$
+	\end{tabular}
+
+	Observe that in the left hand side, we take sums first across \textit{rows}, and then down \textit{columns}.
+	Conversely, on the right hand side, we take sums first down \textit{columns}, and then across \textit{rows}.
+	Yet as both these sums validly traverse the entire table, they must be equal.
+\end{proof}
+
+\newpage
+\begin{proof}[Proof (Algebraic II)]
+	\begin{align*}
+		\sum^{n}_{k=0}\binom{n}{k}\binom{n+k}{k} & = \sum^{n}_{k=0}\binom{n}{k}\sum^{k}_{j=0}\binom{n}{j}\binom{k}{j}                       \\
+		                                         & = \sum^{n}_{k=0}\sum^{k}_{j=0}\binom{n}{k}\binom{n}{j}\binom{k}{j}                       \\
+		                                         & = \sum^{n}_{j=0}\sum^{n}_{k=j}\binom{n}{k}\binom{n}{j}\binom{k}{j} \tag{By lemma $\phi$} \\
+		                                         & = \sum^{n}_{j=0}\binom{n}{j}\sum^{n}_{k=j}\binom{n}{k}\binom{k}{j}                       \\
+		                                         & = \sum^{n}_{j=0}\binom{n}{j}^2\sum^{n}_{k=j}\binom{n-j}{k-j}                             \\
+		                                         & = \sum^{n}_{j=0}\binom{n}{j}^2 2^{n-j}                                                   \\
+		                                         & = \sum^{n}_{j=0}\binom{n}{j}^2 2^{j}                                                     \\
+		                                         & = \sum^{n}_{k=0}\binom{n}{k}^2 2^{k},
+	\end{align*}
+	and we are done.
+\end{proof}
+
+\end{document}
